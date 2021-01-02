@@ -1,0 +1,12 @@
+[package]
+name = "ritecache"
+version = "0.0.0"
+authors = ["Chojan Shang <psiace@outlook.com>"]
+edition = "2018"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/ritedb/ritecache"
+description = "Placeholder for RiteCache. A smart cache that knows your data."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
