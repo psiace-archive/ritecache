@@ -1,14 +1,24 @@
 [package]
 name = "ritecache"
-version = "0.0.0"
-authors = ["Chojan Shang <psiace@outlook.com>"]
+version = "0.1.0"
+authors = ["Chojan Shang <psiace@outlook.com>", "Datafuse Authors <opensource@datafuselabs.com>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/ritedb/ritecache"
-description = "Placeholder for RiteCache. A smart cache that knows your data."
+description = "RiteCache. A smart cache that knows your data."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+heapsize = ["heapsize_"]
+amortized = ["ritelinked/ahash-amortized", "ritelinked/inline-more-amortized"]
+
 [dependencies]
-lru = "0.6.5"
-lfu = "0.2.5"
+filetime = "0.2.15"
+heapsize_ = { package = "heapsize", version = "0.4.2", optional = true}
+log = "0.4"
+ritelinked  = { version = "0.3.2", default-features = false, features = ["ahash", "inline-more"] }
+walkdir = "2.3.2"
+
+[dev-dependencies]
+tempfile = "3"
